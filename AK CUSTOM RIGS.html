@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AK CUSTOM RIGS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1c1c1c, #2e2e2e);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #c4121d;
+      padding: 20px;
+      text-align: center;
+      animation: slideDown 1s ease;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 1rem;
+      color: #ddd;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      animation: fadeIn 2s ease;
+    }
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #ff3b3b;
+      animation: glow 2s infinite alternate;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #ccc;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff3b3b; }
+      to { text-shadow: 0 0 25px #ff3b3b, 0 0 40px #ff5555; }
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #c4121d;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+      animation: pulse 1.5s infinite;
+    }
+    .btn:hover { background: #ff3b3b; }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    /* About */
+    .about {
+      padding: 60px 20px;
+      text-align: center;
+      background: #222;
+    }
+    .about h2 { color: #ff3b3b; margin-bottom: 20px; }
+    .about p { max-width: 700px; margin: auto; color: #ccc; }
+
+    /* Showcase */
+    .showcase {
+      padding: 60px 20px;
+      background: #2b2b2b;
+      text-align: center;
+    }
+    .showcase h2 { color: #ff3b3b; margin-bottom: 30px; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background: #1c1c1c;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .card:hover { transform: translateY(-10px); }
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: -100%;
+      width: 200%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      animation: shine 3s infinite;
+    }
+    @keyframes shine {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+    .card h3 { margin: 10px 0; color: #ff3b3b; }
+    .card p { font-size: 0.9rem; color: #ccc; }
+
+    /* Contact */
+    .contact {
+      padding: 60px 20px;
+      text-align: center;
+      background: #222;
+    }
+    .contact h2 { color: #ff3b3b; margin-bottom: 20px; }
+    .phone {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ff3b3b;
+      animation: blink 1.2s infinite alternate;
+    }
+    @keyframes blink {
+      from { opacity: 1; }
+      to { opacity: 0.6; }
+    }
+
+    /* Marquee */
+    .marquee {
+      background: #2b2b2b;
+      padding: 10px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.6);
+    }
+    .marquee span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll 10s linear infinite;
+      font-size: 1.2rem;
+      color: #ff3b3b;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 15px;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AK CUSTOM RIGS</h1>
+    <p>Next-Gen Custom PC Builds & Gaming Rigs</p>
+  </header>
+
+  <section class="hero">
+    <h2>Powerful. Unique. Built for You.</h2>
+    <p>We create high-performance custom PCs with stunning designs. Whether for gaming, editing, or workstations — we make your dream PC a reality.</p>
+    <a href="tel:8714799259" class="btn">Order Now: 8714799259</a>
+  </section>
+
+  <section class="about">
+    <h2>About Us</h2>
+    <p>At <b>AK CUSTOM RIGS</b>, we believe your PC should be more than just a machine — it should be a masterpiece. With cutting-edge hardware, expert assembly, and stylish mods, we deliver systems that combine raw power with next-level design.</p>
+  </section>
+
+  <section class="showcase">
+    <h2>Our Showcase</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Gaming Beast</h3>
+        <p>RGB lighting, liquid cooling, and top-tier performance for hardcore gamers.</p>
+      </div>
+      <div class="card">
+        <h3>Workstation Pro</h3>
+        <p>Powerful rendering and editing performance for professionals and creators.</p>
+      </div>
+      <div class="card">
+        <h3>Budget Rig</h3>
+        <p>Affordable builds without compromising performance and reliability.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p class="phone">📞 Call Now: 8714799259</p>
+  </section>
+
+  <div class="marquee">
+    <span>🔥 For orders contact us at 8714799259 • AK CUSTOM RIGS • Premium Gaming Builds 🔥</span>
+  </div>
+
+  <footer>
+    © 2025 AK CUSTOM RIGS | All Rights Reserved
+  </footer>
+
+</body>
+</html>
